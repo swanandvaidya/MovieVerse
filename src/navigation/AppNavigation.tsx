@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import ScreenNames from '../constants/ScreenNames';
 import SplashScreen from '../screens/SplashScreen';
 import HomeScreen from '../screens/HomeScreen';
+import FirstOnboardingScreen from '../screens/FirstOnboardingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,10 @@ const AppNavigation = () => {
         <Stack.Screen
           name={ScreenNames.HOME}
           component={HomeScreen}></Stack.Screen>
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={ScreenNames.FIRSTONBOARDING}
+          component={FirstOnboardingScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
