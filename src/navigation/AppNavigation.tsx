@@ -6,6 +6,9 @@ import ScreenNames from '../constants/ScreenNames';
 import SplashScreen from '../screens/SplashScreen';
 import HomeScreen from '../screens/HomeScreen';
 import FirstOnboardingScreen from '../screens/FirstOnboardingScreen';
+import SecondOnboardingScreen from '../screens/SecondOnboardingScreen';
+import ThirdOnboardingScreen from '../screens/ThirdOnboardingScreen';
+import FourthOnboardingScreen from '../screens/FourthOnboardingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +19,8 @@ const AppNavigation = () => {
         initialRouteName={ScreenNames.SPLASH}
         screenOptions={{
           headerShown: true,
+          headerBackTitle: '',
+          headerBackButtonDisplayMode: 'minimal',
           headerStyle: {
             backgroundColor: '#282A28',
           },
@@ -32,6 +37,18 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name={ScreenNames.FIRSTONBOARDING}
           component={FirstOnboardingScreen}></Stack.Screen>
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={ScreenNames.SECONDONBOARDING}
+          component={SecondOnboardingScreen}></Stack.Screen>
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={ScreenNames.THIRDONBOARDING}
+          component={ThirdOnboardingScreen}></Stack.Screen>
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={ScreenNames.FOURTHONBOARDING}
+          component={FourthOnboardingScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

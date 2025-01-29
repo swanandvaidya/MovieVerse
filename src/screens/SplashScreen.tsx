@@ -1,11 +1,22 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Colors from '../themes/Colors';
 import Fonts from '../themes/Fonts';
+import {useNavigation} from '@react-navigation/native';
+import ScreenNames from '../constants/ScreenNames';
 
 const appIcon = require('../assets/images/app_icon.png');
 
 const SplashScreen = () => {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.replace(ScreenNames.FIRSTONBOARDING);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
       <Image source={appIcon} style={styles.appIcon} />
