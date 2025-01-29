@@ -4,7 +4,7 @@ const Colors = {
   white: '#FFFFFF',
   black: '#121312',
   background: '#000000BF',
-  primaryWithOpacity: '#6200EE',
+  blackWithOpacity: '#121312CC',
   gray: '#FFFFFF99',
 };
 

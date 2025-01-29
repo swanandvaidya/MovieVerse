@@ -4,7 +4,6 @@ const ScreenNames = {
   FIRSTONBOARDING: 'FirstOnboarding',
   SECONDONBOARDING: 'SecondOnboarding',
   THIRDONBOARDING: 'ThirdOnboarding',
-  FOURTHONBOARDING: 'FourthOnboarding',
 };
 
 export default ScreenNames;

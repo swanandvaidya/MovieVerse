@@ -8,7 +8,7 @@ import HomeScreen from '../screens/HomeScreen';
 import FirstOnboardingScreen from '../screens/FirstOnboardingScreen';
 import SecondOnboardingScreen from '../screens/SecondOnboardingScreen';
 import ThirdOnboardingScreen from '../screens/ThirdOnboardingScreen';
-import FourthOnboardingScreen from '../screens/FourthOnboardingScreen';
+import Colors from '../themes/Colors';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +22,7 @@ const AppNavigation = () => {
           headerBackTitle: '',
           headerBackButtonDisplayMode: 'minimal',
           headerStyle: {
-            backgroundColor: '#282A28',
+            backgroundColor: Colors.black,
           },
           headerTintColor: '#FFFFFF',
         }}>
@@ -45,10 +45,6 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name={ScreenNames.THIRDONBOARDING}
           component={ThirdOnboardingScreen}></Stack.Screen>
-        <Stack.Screen
-          options={{headerShown: false}}
-          name={ScreenNames.FOURTHONBOARDING}
-          component={FourthOnboardingScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

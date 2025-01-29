@@ -17,8 +17,11 @@ const bgOnboardingTransparent = require('../assets/images/bg_transparent_3.png')
 const ThirdOnboardingScreen = () => {
   const navigation = useNavigation();
 
-  const onPressOfNext = () => {
-    navigation.navigate(ScreenNames.FOURTHONBOARDING);
+  const onPressOfFinish = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{name: ScreenNames.HOME}],
+    });
   };
 
   const onPressOfBack = () => {
@@ -39,8 +42,8 @@ const ThirdOnboardingScreen = () => {
           </Text>
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={onPressOfNext}>
-            <Text style={styles.btnText}>Next</Text>
+            onPress={onPressOfFinish}>
+            <Text style={styles.btnText}>Finish</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btnBorderContainer}
@@ -63,21 +66,21 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 30,
-    backgroundColor: Colors.black,
+    padding: 24,
+    backgroundColor: Colors.blackWithOpacity,
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
   },
   header: {
-    fontSize: 30,
+    fontSize: 24,
     color: Colors.white,
     fontFamily: Fonts.PoppinsSemiBold,
     textAlign: 'center',
   },
   description: {
-    fontSize: 22,
+    fontSize: 18,
     color: Colors.white,
-    paddingTop: 16,
+    paddingTop: 14,
     textAlign: 'center',
   },
   buttonContainer: {
@@ -86,7 +89,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 14,
     backgroundColor: Colors.secondary,
-    marginTop: 24,
+    marginTop: 20,
   },
   btnBorderContainer: {
     width: '100%',
@@ -95,18 +98,18 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     borderColor: Colors.secondary,
     borderWidth: 2,
-    backgroundColor: Colors.black,
-    marginTop: 16,
+    backgroundColor: Colors.blackWithOpacity,
+    marginTop: 14,
   },
   btnText: {
     color: Colors.black,
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: Fonts.PoppinsRegular,
     fontWeight: '500',
   },
   btnBorderText: {
     color: Colors.secondary,
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: Fonts.PoppinsRegular,
     fontWeight: '500',
   },

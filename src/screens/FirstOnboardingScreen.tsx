@@ -52,16 +52,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    padding: 30,
+    padding: 16,
   },
   header: {
-    fontSize: 30,
+    fontSize: 24,
     color: Colors.white,
     fontFamily: Fonts.PoppinsSemiBold,
     textAlign: 'center',
   },
   description: {
-    fontSize: 22,
+    fontSize: 18,
     color: Colors.gray,
     paddingTop: 16,
     textAlign: 'center',
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     backgroundColor: Colors.secondary,
-    marginVertical: 30,
+    marginVertical: 24,
   },
   btnText: {
     color: Colors.black,
