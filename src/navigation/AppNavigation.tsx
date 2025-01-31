@@ -1,5 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {
+  NativeModules,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import React, {useEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import ScreenNames from '../constants/ScreenNames';
@@ -9,12 +16,17 @@ import FirstOnboardingScreen from '../screens/FirstOnboardingScreen';
 import SecondOnboardingScreen from '../screens/SecondOnboardingScreen';
 import ThirdOnboardingScreen from '../screens/ThirdOnboardingScreen';
 import Colors from '../themes/Colors';
+import SystemNavigationBar from 'react-native-system-navigation-bar';
 
 const Stack = createNativeStackNavigator();
 
 const AppNavigation = () => {
+  useEffect(() => {
+    SystemNavigationBar.navigationHide();
+  }, []);
   return (
     <NavigationContainer>
+      {/* <StatusBar hidden={true}></StatusBar> */}
       <Stack.Navigator
         initialRouteName={ScreenNames.SPLASH}
         screenOptions={{
